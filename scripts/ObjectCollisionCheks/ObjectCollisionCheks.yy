@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ObjectCollisionCheks",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ObjectCollisionCheks",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
