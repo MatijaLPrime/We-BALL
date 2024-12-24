@@ -48,13 +48,17 @@ if (playerHP > maxHP){
 }
 if (attack == true){
     if(mouse_check_button_pressed(1)){
-        //audio_play_sound(snd_fireballCast,0,false);
-		var BALL = instance_create_layer(oPlayer.x, oPlayer.y, layer, oMagicBall);
-
-		// Set its depth to a large positive value to make it appear at the bottom
-		if (instance_exists(BALL)) {
-		    BALL.depth = 1; // Adjust as needed (higher depth = lower priority)
-		}
+		var Direction = point_direction(oPlayer.x, oPlayer.y,mouse_x,mouse_y);
+        // Create the magic ball at the player's position
+        var BALL = instance_create_layer(oPlayer.x, oPlayer.y, layer, oMagicBall);
+        
+        // Set the depth of the ball to make it appear at the bottom (optional)
+        if (instance_exists(BALL)) {
+            BALL.depth = 0; // Adjust depth as needed
+            BALL.direction = Direction;  // Set the direction of the magic ball
+            BALL.speed = 3;  // Set the speed of the magic ball
+            BALL.damage = 10;  // Set the damage for the magic ball
+        }
         attack = false;
     }
 }
@@ -86,6 +90,9 @@ if (flashlight_count == 0){
     flashlight_count = 5;
     can_do_flashlight = true;
 }
+
+show_debug_message("Player position: " + string(oPlayer.x) + ", " + string(oPlayer.y));
+show_debug_message("Mouse position: " + string(mouse_x) + ", " + string(mouse_y));
 
 
 //show_debug_message("I ve steped on tile:" + string(tile_x) + "," + string(tile_y));
