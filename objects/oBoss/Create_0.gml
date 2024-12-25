@@ -1,4 +1,4 @@
-agroRadius = 1;
+agroRadius = 100;
 hp = 10;
 maxHP = 1000;
 agro = false;

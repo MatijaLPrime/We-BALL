@@ -16,9 +16,11 @@ else if (distance_to_object(oPlayer) > agroRadius){
 }
 
 
-if (agro = true and count == attackSpeed){
+if (hp >0 && agro = true and count == attackSpeed){
 	show_debug_message("I entered debug");
     //audio_play_sound(snd_fireballCast, 0, false);
+	var fireBall = instance_create_layer(oBoss.x,oBoss.y,layer, oFireBall);
+	fireBall.depth = 0;
     if(instance_create_layer(oBoss.x,oBoss.y,layer, oFireBall)){
 		show_debug_message("I have created");
 	}
@@ -29,7 +31,7 @@ if (agro = true and count == attackSpeed){
 count --;
 
 if (hp <= 500 and distance_to_object(oPlayer) < agroRadius){
-    speed = 1.5;
+    speed = 0.7;
     //oFireBall.speed = 7;
     attackSpeed = 60;
 }

@@ -1,6 +1,6 @@
 // Variables for Dead Zone Size
-var deadZoneWidth = view_w / 4;  // 25% of view width
-var deadZoneHeight = view_h / 4; // 25% of view height
+var deadZoneWidth = view_w / 8;  // 25% of view width
+var deadZoneHeight = view_h / 8; // 25% of view height
 
 // Variables for Smooth Transition (smoothing factor)
 var smoothFactor = 0.1;  // Smoothing factor for the camera transition (adjust as needed)
@@ -16,9 +16,11 @@ var offsetY = 0;
 // Check if the mouse is outside the dead zone (either horizontally or vertically)
 if (abs(mouseRelativeX) > deadZoneWidth) {
     if (mouseRelativeX > 0) {
-        offsetX = (mouseRelativeX - deadZoneWidth) * 0.7;  // Adjust for right side (multiply by scale factor)
+        offsetX = (mouseRelativeX - deadZoneWidth) * 0.7; // Adjust for right side (multiply by scale factor)
+		oPlayer.sprite_index = player;
     } else {
-        offsetX = (mouseRelativeX + deadZoneWidth) * 0.7;  // Adjust for left side
+        offsetX = (mouseRelativeX + deadZoneWidth) * 0.7;
+		oPlayer.sprite_index = playerLeft;// Adjust for left side
     }
 }
 

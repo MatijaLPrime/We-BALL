@@ -15,6 +15,10 @@ if(keyUp && keyLeft || keyUp && keyRight || keyDown&&keyRight || keyDown&&keyLef
 	inputMagnitude*= 0.95;
 }
 
+/*if(keyLeft)
+	sprite_index = playerLeft;
+if(keyRight)
+	sprite_index = player;*/
 // Movement
 if(!global.isInputDisabled){
 	hSpeed = lengthdir_x(inputMagnitude * speedWalk, inputDirection);

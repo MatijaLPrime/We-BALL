@@ -25,7 +25,11 @@ if(instance_exists(oHouse)){
 	if(CheckPlayerCollision(collisonRec,oPlayer.x, oPlayer.y + oPlayer.sprite_height/2)){
 		oBounderies.bump();
 	}
-}
+	
+	if(instance_exists(oBoss) && CheckPlayerCollision(collisonRec,oBoss.x,oBoss.y + oBoss.sprite_height/2)){
+		oBounderies.knockBack(oBoss);
+	}
+}	
 //show_debug_message("Checking collision at player position: (" + string(oPlayer.x) + ", " + string(oPlayer.y)+")");
 
 
