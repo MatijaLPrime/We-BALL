@@ -12,15 +12,9 @@ if(global.isSlowed)
 	inputMagnitude *= 0.3;
 
 if(keyUp && keyLeft || keyUp && keyRight || keyDown&&keyRight || keyDown&&keyLeft){
-	inputMagnitude*= 0.9;
+	inputMagnitude*= 0.95;
 }
 
-if(keyLeft){
-	sprite_index = playerLeft;
-}
-if(keyRight){
-	sprite_index = player;
-}
 // Movement
 if(!global.isInputDisabled){
 	hSpeed = lengthdir_x(inputMagnitude * speedWalk, inputDirection);
@@ -48,16 +42,17 @@ if (playerHP > maxHP){
 }
 if (attack == true){
     if(mouse_check_button_pressed(1)){
-		var Direction = point_direction(oPlayer.x, oPlayer.y,mouse_x,mouse_y);
+		 // Calculate the player's world position by removing camera offset
+
+        // Calculate the aiming direction using the adjusted player world coordinates
+        //var Direction = point_direction(playerWorldX, playerWorldY, mouse_x, mouse_y);
+
         // Create the magic ball at the player's position
         var BALL = instance_create_layer(oPlayer.x, oPlayer.y, layer, oMagicBall);
-        
+
         // Set the depth of the ball to make it appear at the bottom (optional)
         if (instance_exists(BALL)) {
-            BALL.depth = 0; // Adjust depth as needed
-            BALL.direction = Direction;  // Set the direction of the magic ball
-            BALL.speed = 3;  // Set the speed of the magic ball
-            BALL.damage = 10;  // Set the damage for the magic ball
+            BALL.depth = 0;  // Adjust depth as needed
         }
         attack = false;
     }

@@ -5,7 +5,10 @@ cam = view_camera[0];
 follow = oPlayer; // The player object to follow
 bufferFactor = 0.05; // Smoothing factor for camera transition (smaller values for slower transitions)
 directionOffset = 0; // To store the offset based on direction
-lastDirection = 0; // Store the last direction (0 = no movement, or you can use a direction range)
+lastMouseDirection = -1;
+// Store the last direction (0 = no movement, or you can use a direction range)
+view_h = camera_get_view_width(cam);
+view_w = camera_get_view_width(cam);
 view_w_half = camera_get_view_width(cam) * 0.5;
 view_h_half = camera_get_view_height(cam) * 0.5;
 

@@ -1,7 +1,7 @@
 {
   "$GMRoom":"v1",
   "%Name":"Room1",
-  "creationCodeFile":"",
+  "creationCodeFile":"rooms/Room1/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
@@ -21,8 +21,9 @@
   "isDnd":false,
   "layers":[
     {"$GMRTileLayer":"","%Name":"Map","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Map","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":12,"SerialiseWidth":12,"TileCompressedData":[
-          -26,-2147483648,-8,2,-4,-2147483648,-8,2,-4,-2147483648,-8,2,-3,-2147483648,-9,2,-4,-2147483648,-8,2,
-          -4,-2147483648,-7,2,2,1,2,-3,-2147483648,-9,2,-6,-2147483648,-3,2,-28,-2147483648,
+          -13,2,-10,-2147483648,-2,2,1,-2147483648,-8,2,4,-2147483648,2,2,-2147483648,-8,2,4,-2147483648,2,2,-2147483648,
+          -8,2,4,-2147483648,2,2,0,-8,2,4,-2147483648,2,2,-2147483648,-8,2,4,-2147483648,2,2,-2147483648,-7,2,
+          5,1,0,2,2,-2147483648,-8,2,3,0,2,2,-10,0,-25,2,
         ],"TileDataFormat":1,},"tilesetId":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_641028CB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_641028CB","objectId":{"name":"oRender","path":"objects/oRender/oRender.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":128.0,"y":96.0,},
