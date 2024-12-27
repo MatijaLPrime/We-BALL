@@ -18,6 +18,12 @@ else {
 		var angle_to_mouse = point_direction(oPlayer.x, oPlayer.y, mouse_x, mouse_y);
 		if(instance_exists(oBoss))
 			var angle_to_player = point_direction(oBoss.x, oBoss.y, oPlayer.x, oPlayer.y);
+			
+		// calculate the scale for flashlight width
+		var flaslight_width_modifier = abs(sin(degtorad(angle_to_mouse))) * 0.5; 
+		var flashlight_width_scale = 0.6 + flaslight_width_modifier;
+		
+		//surface selection and modification
 		surface_set_target(surf);
 		draw_set_color(c_black);
 		draw_set_alpha(0.70);
@@ -34,7 +40,10 @@ else {
 
 				if (oPlayer.flashlight_is_on){
 
-					draw_sprite_ext(sLight, 0, x - _cx , y - _sh - _cy, 1, 1, angle_to_mouse - 90, c_white, 1);
+					draw_sprite_ext(sLight, 0, x - _cx , y - _sh - _cy, flashlight_width_scale, 1, angle_to_mouse - 90, c_white, 1);
+					show_debug_message(string(angle_to_mouse));
+					show_debug_message(string(sin(angle_to_mouse)));
+					show_debug_message(string(flashlight_width_scale));
 					break;
 				}
 

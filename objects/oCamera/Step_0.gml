@@ -17,10 +17,10 @@ var offsetY = 0;
 if (abs(mouseRelativeX) > deadZoneWidth) {
     if (mouseRelativeX > 0) {
         offsetX = (mouseRelativeX - deadZoneWidth) * 0.7; // Adjust for right side (multiply by scale factor)
-		oPlayer.sprite_index = player;
+		oPlayer.sprite_index = sPlayerRight;
     } else {
         offsetX = (mouseRelativeX + deadZoneWidth) * 0.7;
-		oPlayer.sprite_index = playerLeft;// Adjust for left side
+		oPlayer.sprite_index = sPlayerLeft;// Adjust for left side
     }
 }
 
